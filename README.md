@@ -1,9 +1,16 @@
 # Sõnajaht: Definition Embeddings and Semantic Search for Reverse Dictionary Creation
 
 
-## Data
+## Import Data
 
-https://huggingface.co/datasets/adorkin/sonajaht
+Having downloaded the data from [HuggingFace Datasets](https://huggingface.co/datasets/adorkin/sonajaht) into
+`tsv` folder, run the data import with:
+
+`python preprocess.py`
+
+## Vectorize
+
+## Create Qdrant Collection
 
 ## Citation
 
