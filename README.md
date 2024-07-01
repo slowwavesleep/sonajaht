@@ -1,6 +1,10 @@
 # Sõnajaht: Definition Embeddings and Semantic Search for Reverse Dictionary Creation
 
 
+## Data
+
+https://huggingface.co/datasets/adorkin/sonajaht
+
 ## Citation
 
 ```
