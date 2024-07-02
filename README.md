@@ -4,13 +4,33 @@
 ## Import Data
 
 Having downloaded the data from [HuggingFace Datasets](https://huggingface.co/datasets/adorkin/sonajaht) into
-`tsv` folder, run the data import with:
+`tsv` folder, run the data import.
 
 `python preprocess.py`
 
 ## Vectorize
 
+```
+python vectorize.py "e5-multilingual-large" --prefix query --show_progress_bar
+```
+
 ## Create Qdrant Collection
+
+Run Qdrant container in Docker and mount local storage to persist the collection.
+```
+docker run -p 6333:6333 -v $(pwd)/qdrant_mount/qdrant_storage:/qdrant/storage qdrant/qdrant     
+```
+
+Create the collection in Qdrant.
+```
+python collection.py "e5-multilingual-large-query" --postfix "query"
+```
+
+## Gradio Demo
+
+```
+python search_ui.py
+```
 
 ## Citation
 
